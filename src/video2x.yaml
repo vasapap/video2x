@@ -1,7 +1,5 @@
-# Name: Video2X Configuration File
-# Creator: K4YT3X
-# Date Created: October 23, 2018
-# Last Modified: September 28, 2020
+# Creator: KOKODIO
+# Last Modified: April 27, 2021
 # Values here are the default values. Change the value here to
 #   save the default value permanently.
 # Items commented out are parameters irrelevant to this context
@@ -34,7 +32,7 @@ waifu2x_converter_cpp:
   #list-processor # dump processor list
   #output-format: null # The format used when running in recursive/folder mode
   png-compression: 5 # Set PNG compression level (0-9), 9 = Max compression (slowest & smallest)
-  image-quality: -1 # JPEG & WebP Compression quality (-1-101, 0 being smallest size and lowest quality, -1 being default), use 101 for lossless WebP
+  image-quality: 101 # JPEG & WebP Compression quality (-1-101, 0 being smallest size and lowest quality, -1 being default), use 101 for lossless WebP
   block-size: 0 # block size
   disable-gpu: false # disable GPU
   force-OpenCL: false # force to use OpenCL on Intel Platform
@@ -53,12 +51,12 @@ waifu2x_converter_cpp:
   #output: null # path to output image file or directory  (you should use the full path)
   #input: null # (required) path to input image file or directory (you should use the full path)
 waifu2x_ncnn_vulkan:
-  path: '%LOCALAPPDATA%\video2x\waifu2x-ncnn-vulkan\waifu2x-ncnn-vulkan'
+  path: '/content/waifu2x-ncnn-vulkan-20210210-ubuntu/waifu2x-ncnn-vulkan'
   v: null # verbose output
   #i: null # input-path: input image path (jpg/png/webp) or directory
   #o: null # output-path: output image path (jpg/png/webp) or directory
   'n': 2 # noise-level: denoise level (-1/0/1/2/3, default=0)
-  s: 2 # scale: upscale ratio (1/2, default=2)
+  s: 4 # scale: upscale ratio (1/2, default=2)
   t: 400 # tile-size: tile size (>=32, default=400)
   m: null # model-path: waifu2x model path (default=models-cunet)
   g: 0 # gpu-id: gpu device to use (default=0)
@@ -66,11 +64,11 @@ waifu2x_ncnn_vulkan:
   x: false # enable tta mode
   #f: png # output image format (jpg/png/webp, default=ext/png)
 srmd_ncnn_vulkan:
-  path: '%LOCALAPPDATA%\video2x\srmd-ncnn-vulkan\srmd-ncnn-vulkan'
+  path: '/content/srmd-ncnn-vulkan-20210210-ubuntu/srmd-ncnn-vulkan'
   v: null # verbose output
   #i: null # input-path: input image path (jpg/png) or directory
   #o: null # output-path: output image path (png) or directory
-  'n': 3 # noise-level: denoise level (-1/0/1/2/3/4/5/6/7/8/9/10, default=3)
+  'n': 2 # noise-level: denoise level (-1/0/1/2/3/4/5/6/7/8/9/10, default=3)
   s: 2 # upscale ratio (2/3/4, default=2)
   t: 400 # tile-size: tile size (>=32, default=400)
   m: null # srmd model path (default=models-srmd)
@@ -79,7 +77,7 @@ srmd_ncnn_vulkan:
   x: false # enable tta mode
   #f: png # output image format (jpg/png/webp, default=ext/png)
 realsr_ncnn_vulkan:
-  path: '%LOCALAPPDATA%\video2x\realsr-ncnn-vulkan\realsr-ncnn-vulkan'
+  path: '/content/realsr-ncnn-vulkan-20210210-ubuntu/realsr-ncnn-vulkan'
   v: null # verbose output
   #i: null # input-path: input image path (jpg/png) or directory
   #o: null # output-path: output image path (png) or directory
@@ -120,7 +118,7 @@ anime4kcpp:
   webVideo: null # process the video from URL
   alpha: false # preserve the Alpha channel for transparent image
 ffmpeg:
-  ffmpeg_path: '%LOCALAPPDATA%\video2x\ffmpeg\bin'
+  ffmpeg_path: '/usr/bin'
   intermediate_file_name: 'intermediate.mkv'
   # Step 1: Frame Extraction
   # extract all frames from original input into temporary directory
